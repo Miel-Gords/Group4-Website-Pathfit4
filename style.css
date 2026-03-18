@@ -1,0 +1,318 @@
+/* CSS VARIABLES FOR NEO-BRUTALISM & THEME TOGGLE */
+:root {
+    --bg-color: #f4ecdf;
+    --text-color: #111111;
+    --primary-color: #ffde59;
+    --secondary-color: #ff914d;
+    --accent-color: #c1ff72;
+    --border-color: #000000;
+    --shadow-color: #000000;
+    --card-bg: #ffffff;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #f0f0f0;
+    --primary-color: #6a00ff;
+    --secondary-color: #ff0055;
+    --accent-color: #00ffcc;
+    --border-color: #f0f0f0;
+    --shadow-color: #f0f0f0;
+    --card-bg: #2a2a2a;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace; /* Brutalist typography */
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    line-height: 1.6;
+}
+
+/* HEADER & KEBAB MENU */
+header {
+    background-color: var(--primary-color);
+    border-bottom: 4px solid var(--border-color);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    text-shadow: 2px 2px 0px var(--shadow-color);
+    color: var(--text-color);
+    -webkit-text-stroke: 1px var(--border-color);
+}
+
+.menu-container {
+    position: relative;
+}
+
+.kebab-btn {
+    background: var(--card-bg);
+    border: 3px solid var(--border-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 5px 15px;
+    box-shadow: 3px 3px 0px var(--shadow-color);
+    font-weight: bold;
+    color: var(--text-color);
+    transition: transform 0.1s;
+}
+
+.kebab-btn:active {
+    transform: translate(3px, 3px);
+    box-shadow: 0px 0px 0px var(--shadow-color);
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    background-color: var(--card-bg);
+    border: 3px solid var(--border-color);
+    box-shadow: 5px 5px 0px var(--shadow-color);
+    flex-direction: column;
+    width: 200px;
+    z-index: 200;
+}
+
+.dropdown-menu.show {
+    display: flex;
+}
+
+.dropdown-menu button {
+    background: none;
+    border: none;
+    border-bottom: 2px solid var(--border-color);
+    padding: 15px;
+    text-align: left;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.dropdown-menu button:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu button:hover {
+    background-color: var(--accent-color);
+    color: #111;
+}
+
+/* MAIN CONTENT & CARDS */
+main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: var(--card-bg);
+    border: 4px solid var(--border-color);
+    box-shadow: 8px 8px 0px var(--shadow-color);
+    margin-bottom: 40px;
+    padding: 30px;
+    position: relative;
+}
+
+section:nth-child(even) {
+    background-color: var(--secondary-color);
+    color: #111;
+}
+
+[data-theme="dark"] section:nth-child(even) {
+    color: #f0f0f0;
+}
+
+h2 {
+    font-size: 2rem;
+    border-bottom: 3px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+p, ul, ol {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    font-family: Arial, sans-serif;
+    font-weight: 500;
+}
+
+ul, ol {
+    margin-left: 25px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* MEDIA PLACEHOLDERS */
+.media-placeholder {
+    width: 100%;
+    height: 250px;
+    background-color: var(--accent-color);
+    border: 3px dashed var(--border-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #111;
+    margin: 20px 0;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    border: 4px solid var(--border-color);
+    box-shadow: 8px 8px 0px var(--shadow-color);
+    margin-bottom: 40px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* MODALS */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 300;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-overlay.show {
+    display: flex;
+}
+
+.modal-content {
+    background-color: var(--card-bg);
+    border: 4px solid var(--border-color);
+    box-shadow: 10px 10px 0px var(--shadow-color);
+    padding: 30px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--secondary-color);
+    border: 2px solid var(--border-color);
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px 10px;
+    box-shadow: 2px 2px 0px var(--shadow-color);
+    color: #111;
+}
+
+.close-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 0px 0px 0px var(--shadow-color);
+}
+
+/* 12 STRIKES INTERACTIVE GRID */
+.strikes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.strike-btn {
+    background-color: var(--card-bg);
+    border: 3px solid var(--border-color);
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--text-color);
+    cursor: pointer;
+    box-shadow: 4px 4px 0px var(--shadow-color);
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.strike-btn:hover {
+    background-color: var(--primary-color);
+    color: #111;
+}
+
+.strike-btn:active {
+    transform: translate(4px, 4px);
+    box-shadow: 0px 0px 0px var(--shadow-color);
+}
+
+.strike-btn.active {
+    background-color: var(--accent-color);
+    color: #111;
+    transform: translate(4px, 4px);
+    box-shadow: 0px 0px 0px var(--shadow-color);
+}
+
+.strike-info-box {
+    background-color: var(--card-bg);
+    border: 4px dashed var(--border-color);
+    padding: 20px;
+    font-size: 1.2rem;
+    font-family: Arial, sans-serif;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* NEO-BRUTALIST IMAGE STYLE */
+.brutal-image {
+    width: 100%;
+    max-width: 600px; /* Keeps it from getting too huge on big screens */
+    height: auto;
+    border: 5px solid var(--border-color);
+    box-shadow: 8px 8px 0px var(--shadow-color);
+    margin: 20px 0;
+    display: block;
+}
+
+/* MODAL TEAM LOGO STYLE */
+.team-logo {
+    width: 150px; /* You can change this number to make the logo bigger or smaller */
+    height: auto;
+    border: 4px solid var(--border-color);
+    box-shadow: 6px 6px 0px var(--shadow-color);
+    margin: 15px auto 25px auto; /* Centers the logo and adds spacing */
+    display: block;
+    background-color: var(--primary-color); /* Adds a pop of color behind transparent logos */
+    border-radius: 50%; /* Makes the logo circular. Delete this line if you want a square */
+}

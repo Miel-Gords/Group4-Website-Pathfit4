@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arnis Fundamentals | Neo-Brutalism</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Learn Arnis</h1>
+        <div class="menu-container">
+            <button class="kebab-btn" id="kebabBtn" aria-label="Menu">&#8942;</button>
+            <div class="dropdown-menu" id="dropdownMenu">
+                <button id="btnMembers">Members</button>
+                <button id="btnInfo">Why We Made This</button>
+                <button id="btnTheme">Toggle Dark Mode</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>History of Arnis</h2>
+            <p>Arnis, also known interchangeably as <strong>Kali</strong> or <strong>Eskrima</strong>, is the indigenous martial art of the Philippines. It is famous for its emphasis on weapon-based fighting with sticks, bladed weapons, and improvised items, seamlessly transitioning into empty-hand techniques.</p>
+            <ul>
+                <li><strong>Pre-Colonial Origins:</strong> Developed by indigenous tribes for tribal combat and self-defense, the original systems relied heavily on the use of swords and local blades.</li>
+                <li><strong>Spanish Colonization:</strong> When Spanish colonizers banned the carrying of bladed weapons, Filipinos secretly preserved their fighting arts. The deadly movements were disguised and practiced within traditional dances and mock battles in religious stage plays (like the <em>moro-moro</em>).</li>
+                <li><strong>The Shift to Rattan:</strong> To practice safely and avoid the lethal consequences of training with live blades, practitioners transitioned to using the <em>baston</em> made of rattan, which remains the standard training tool today.</li>
+                <li><strong>Modern Era:</strong> Visionaries like Grandmaster Remy Presas founded "Modern Arnis" to unify the diverse regional styles and ensure the art's survival. In 2009, Arnis was officially declared the <strong>National Martial Art and Sport of the Philippines</strong>.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>1. Basic Fighting Stance</h2>
+            <p>The foundation of all movements in Arnis. A proper stance ensures balance, mobility, and readiness to strike or defend.</p>
+            <ul>
+                <li>Feet are shoulder-width apart.</li>
+                <li>Lead foot points forward; rear foot is angled slightly outward.</li>
+                <li>Knees are slightly bent to absorb impact and allow quick movement.</li>
+                <li>Weapon hand is raised and ready, off-hand (live hand) is positioned near the chest for checking.</li>
+            </ul>
+             <img src="images/RS.jpg" alt="Basic Fighting Stance" class="brutal-image">
+        </section>
+
+        <section>
+            <h2>2. Basic Grip</h2>
+            <p>Holding the baston (stick) correctly prevents you from dropping it and provides leverage for strikes.</p>
+            <ul>
+                <li>Wrap your fingers firmly around the stick.</li>
+                <li>Leave a fist-width of space (about 2-3 inches) at the bottom. This bottom part is called the <strong>punyo</strong> and is used for close-quarters striking and hooking.</li>
+                <li>Keep the wrist relaxed to allow snapping motions.</li>
+            </ul>
+            <img src="images/BG.avif" alt="Basic Fighting Stance" class="brutal-image">
+        </section>
+
+        <section>
+            <h2>3. Basic Blocking Techniques</h2>
+            <p>Defending against an opponent's strikes using the stick and the live hand.</p>
+            <ul>
+                <li><strong>Inside Block:</strong> Defending against strikes to the left side of your body (Strike #1). Force is met with force, supported by the live hand.</li>
+                <li><strong>Outside Block:</strong> Defending against strikes to the right side of your body (Strike #2).</li>
+                <li><strong>Roof Block:</strong> Defending against overhead strikes (Strike #12), angling the stick upward to slide the attack off.</li>
+                <li><strong>Drop Block:</strong> Defending against low strikes to the knees or legs.</li>
+            </ul>
+            <img src="images/BT.png" alt="Basic Fighting Stance" class="brutal-image">
+        </section>
+
+        <section>
+            <h2>4. Basic Footwork</h2>
+            <p>Footwork is how you control the distance (range) and angles between you and your opponent.</p>
+            <ul>
+                <li><strong>Forward Triangle (V-Step):</strong> Stepping diagonally forward to the left or right to evade and counter.</li>
+                <li><strong>Reverse Triangle:</strong> Stepping diagonally backward to retreat while maintaining a defensive posture.</li>
+                <li><strong>Lateral Stepping:</strong> Moving side-to-side to flank the opponent.</li>
+            </ul>
+            <img src="images/BFW.png" alt="Basic Fighting Stance" class="brutal-image">
+        </section>
+
+        <section>
+            <h2>5. The 12 Striking Techniques</h2>
+            <p>The core striking targets in Modern Arnis. Click a strike below to learn how to execute it.</p>
+            
+            <div class="strikes-grid">
+                <button class="strike-btn" data-strike="1">1. Left Temple</button>
+                <button class="strike-btn" data-strike="2">2. Right Temple</button>
+                <button class="strike-btn" data-strike="3">3. Left Torso</button>
+                <button class="strike-btn" data-strike="4">4. Right Torso</button>
+                <button class="strike-btn" data-strike="5">5. Stomach</button>
+                <button class="strike-btn" data-strike="6">6. Left Chest</button>
+                <button class="strike-btn" data-strike="7">7. Right Chest</button>
+                <button class="strike-btn" data-strike="8">8. Left Leg</button>
+                <button class="strike-btn" data-strike="9">9. Right Leg</button>
+                <button class="strike-btn" data-strike="10">10. Left Eye</button>
+                <button class="strike-btn" data-strike="11">11. Right Eye</button>
+                <button class="strike-btn" data-strike="12">12. Crown</button>
+            </div>
+
+            <div id="strike-info-box" class="strike-info-box">
+                <em>Select a strike from the buttons above to view its details.</em>
+            </div>
+        </section>
+
+        <div class="video-container">
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/XYM1tv4fp5s?si=d-vhIl1x9BszjLJi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </main>
+
+    <div class="modal-overlay" id="modalMembers">
+        <div class="modal-content">
+            <button class="close-btn" id="closeMembersBtn">X</button>
+            <h2>Team Members</h2>
+            <img src="images/SSULOGO.PNG" alt="Team Logo" class="team-logo">
+            <p><strong>Developers: Students of Samar State University</strong></p>
+            <p><strong>Program: BS Information Systems</strong></p>
+            <ul>
+                <li><strong>Kenny Rich Lovina:</strong> Lead Developer</li>
+                <li><strong>Juvan Mabesa:</strong> Full Stack Developer</li>
+                <li><strong>Judy Ann Jabolin:</strong> Researcher</li>
+                <li><strong>Irene Labrada:</strong> Media Coordinator (Images & Videos)</li>
+                <li><strong>Junel Mendaño:</strong> Proof Reader</li>
+                <br>
+                <strong>INSTRUCTOR</strong>
+                <li><strong>Rowel O. Pacaña:</strong></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modalInfo">
+        <div class="modal-content">
+            <button class="close-btn" id="closeInfoBtn">X</button>
+            <h2>Why We Made This</h2>
+            <p>We created this website to promote the Filipino martial art of Arnis. Our goal is to provide a highly accessible, visually engaging, and easy-to-understand resource for beginners to learn the fundamental stances, grips, blocks, and strikes.</p>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
